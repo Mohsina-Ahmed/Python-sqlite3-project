@@ -9,6 +9,20 @@ app = Flask(__name__)
 
 def get_db_connection():
     conn = sql.connect('filmflix.db')
+    cur = conn.cursor()
+ 
+    # Creating table
+    table = """ CREATE TABLE IF NOT EXISTS tblFilms (
+            FilmID INTEGER PRIMARY KEY NOT NULL,
+            title VARCHAR(50) NOT NULL,
+            yearReleased INTEGER NOT NULL,
+            rating VARCHAR(25) NOT NULL,
+            duration INTEGER NOT NULL,
+            genre VARCHAR(25) NOT NULL
+        ); """
+ 
+    cur.execute(table)
+    
     conn.row_factory = sql.Row
     return conn
 

@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} Welcome to Film Flex {% endblock %}</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="\">
+      <img
+        class="middle"
+        src="{{ url_for('static', filename= 'images/pop-corn.jpg') }}"
+        alt="alternatetext"
+    /></a>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    {% endblock %}
+  </body>
+</html>

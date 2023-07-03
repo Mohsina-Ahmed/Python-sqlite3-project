@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} Welcome to Film Flex {% endblock %}</h1>
+<html>
+   <body>
+      
+      <form class="middle" action = "{{ url_for('deleterec') }}" method = "POST">
+         <h3>Delete Film Record Entry</h3>
+         Enter the Film ID that you want to delete?<br>
+         <input class="input-field" type = "text" name = "filmID" /></br>
+         <br><br><br><br>
+         <input class="button" type = "submit" value = "Delete" /><br>
+      </form>
+      <br><br><br><br><br><br><br><br>
+      {% endblock %} 
+   </body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} Welcome to Film Flex {% endblock %}</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Flex</title>
+  </head>
+  <body>
+    <p class="middle">
+      Welcome to the film flex portal. Please choose the option from the
+      menu.<br />
+      To see the list of the films go to:<a href="\display"> Film Flex</a><br />
+      To add more films go to:<a href="\insertRecord"> Insert Record</a> <br />
+      To update record go to:<a href="\getId"> Update Record</a> <br />
+      To delete record go to:<a href="\deleteRecord"> Delete Record</a> <br />
+      To see report of different film data go to:<a href="\reportBy"> Report</a>
+      <br />
+      To exit the portal go to:<a href="\welcome"> Exit</a> <br />
+    </p>
+    <a href="\">
+      <img
+        class="middle"
+        src="{{ url_for('static', filename= 'images/pop-corn.jpg') }}"
+        alt="alternatetext"
+    /></a>
+
+    {% endblock %}
+  </body>
+</html>

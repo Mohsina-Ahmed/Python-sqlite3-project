@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} Welcome to Film Flex {% endblock %}</h1>
+<html>
+  <body>
+    <form class="middle" action="{{ url_for('reportRecord')}}" method="POST">
+      <h3>Record</h3>
+
+      <br />
+      <label for="Filter">Choose the option to report:</label>
+
+      <select class="input-field" name="reportBy" id="reportBy">
+        <option value="title">Title</option>
+        <option value="yearReleased">Year Released</option>
+        <option value="rating">Rating</option>
+        <option value="duration">Film Duration</option>
+        <option value="genre">Genre</option>
+      </select></br>
+      <label for="Filter"> Value to filter:</label>
+      <input class="input-field" type = "text" name = "filterValue"/></br>
+      <br /><br /><br /><br />
+      <input class="button" type="submit" value="Filter" /><br />
+    </form>
+    <br><br><br><br><br><br><br><br>
+    {% endblock %}
+  </body>
+</html>

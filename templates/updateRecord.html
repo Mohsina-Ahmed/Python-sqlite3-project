@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} Welcome to Film Flex {% endblock %}</h1>
+<html>
+   <body>
+      
+      <form class="middle" action = "{{ url_for('updaterec') }}" method = "POST">
+         <h3>Update Film Record Entry</h3>
+         {% for post in posts %}
+         Enter the Film ID that you want to update?<br>
+         <input class="input-field" type = "text" name = "filmID" value="{{post['filmID']}}"/></br>
+         Title<br>
+         
+         <input class="input-field" type = "text" name = "title" value="{{post['title']}}" /></br>
+         
+         Year Released<br>
+         <input class="input-field" type = "text" name = "yearRld" value="{{post['yearReleased']}}" /></br>
+         
+         Rating<br>
+         <input class="input-field" type = "text" name = "rating" value="{{post['rating']}}"/><br>
+         
+         Duration<br>
+         <input class="input-field" type = "text" name = "duration" value="{{post['duration']}}"/><br>
+         Genre<br>
+         <input class="input-field" type = "text" name = "genre" value="{{post['genre']}}"/><br>
+         <br><br>
+         <input class="button" type = "submit" value = "Update" /><br>
+         {% endfor %}
+      </form>
+      {% endblock %} 
+   </body>
+</html>
